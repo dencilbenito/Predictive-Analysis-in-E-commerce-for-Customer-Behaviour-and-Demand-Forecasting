@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Predictive_Web" Class="dbconnectDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=Predictive_Web;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Predictive_WebConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AgeGroupTable" Member="AgeGroupTables">
+    <Type Name="AgeGroupTable">
+      <Column Name="AgeGroup_Code" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Age_Group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.variableTable" Member="variableTables">
+    <Type Name="variableTable">
+      <Column Name="variable_name" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="variable_count" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BinaryCodeDataset" Member="BinaryCodeDatasets">
+    <Type Name="BinaryCodeDataset">
+      <Column Name="Sales_no" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Sales_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MainCategory_Code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SubCategory_Code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Brand_name_code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Product_code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Qty_Purchased" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Color_Name_code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Festival_Code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Size_Code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Gender_Code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Locality_Code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="AgeGroup_code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Month_Code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Season_Code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Price_Code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Rating_Code" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BrandNameTable" Member="BrandNameTables">
+    <Type Name="BrandNameTable">
+      <Column Name="Brandcode" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Brandname" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ColorNameTable" Member="ColorNameTables">
+    <Type Name="ColorNameTable">
+      <Column Name="Color_Code" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Color_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FestivalTable" Member="FestivalTables">
+    <Type Name="FestivalTable">
+      <Column Name="Festival_code" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Festival_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Start_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="End_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.finaltemptable" Member="finaltemptables">
+    <Type Name="finaltemptable">
+      <Column Name="Temp_sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Temp_Variable" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Temp_Purqty" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Temp_Rank" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Temp_Reorder" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GenderTable" Member="GenderTables">
+    <Type Name="GenderTable">
+      <Column Name="Gender_code" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Gender_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GraphData" Member="GraphDatas">
+    <Type Name="GraphData">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mean_value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Rank" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HistoricalDataset" Member="HistoricalDatasets">
+    <Type Name="HistoricalDataset">
+      <Column Name="Sales_no" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sales_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MainCategory_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SubCategory_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Brand_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Product_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Qty_Purchased" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Color_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Festival_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Size_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Locality_Purchased" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Age_Group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Season" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Price_Group" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Rating" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="age" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Festival" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KNN_Temp" Member="KNN_Temps">
+    <Type Name="KNN_Temp">
+      <Column Name="SNO" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="x_variable" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="y_variable" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocalityTable" Member="LocalityTables">
+    <Type Name="LocalityTable">
+      <Column Name="Locality_Code" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Locality_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MainCategoryTable" Member="MainCategoryTables">
+    <Type Name="MainCategoryTable">
+      <Column Name="MainCategory_code" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Maincategoy_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MonthTable" Member="MonthTables">
+    <Type Name="MonthTable">
+      <Column Name="MonthCode" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Month_Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Season_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceTable" Member="PriceTables">
+    <Type Name="PriceTable">
+      <Column Name="Price_code" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Price_Range_From" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Price_Range_to" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PrimaryCodeDataset" Member="PrimaryCodeDatasets">
+    <Type Name="PrimaryCodeDataset">
+      <Column Name="Sales_no" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Sales_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MainCategory_Code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SubCategory_Code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Brand_name_code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Product_code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Qty_Purchased" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Color_Name_code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Festival_Code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Size_Code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Gender_Code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Locality_Code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="AgeGroup_code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Month_Code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Season_Code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Rating_Code" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductMaster" Member="ProductMasters">
+    <Type Name="ProductMaster">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Product_code" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Main_category" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Sub_Category" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Brand_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Item_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Size" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RatingTable" Member="RatingTables">
+    <Type Name="RatingTable">
+      <Column Name="Rating_no" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Rating_Value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sales_Gender" Member="Sales_Genders">
+    <Type Name="Sales_Gender">
+      <Column Name="Sales_no" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Sales_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Female" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Male" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="General" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sales_Locality" Member="Sales_Localities">
+    <Type Name="Sales_Locality">
+      <Column Name="Sales_no" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Sales_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Urban" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Rural" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Semi_urban" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Semi_Rural" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sales_Season" Member="Sales_Seasons">
+    <Type Name="Sales_Season">
+      <Column Name="Sales_no" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Sales_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Spring" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Summer" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Autumn" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Winter" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SeasonTable" Member="SeasonTables">
+    <Type Name="SeasonTable">
+      <Column Name="Season_Code" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Season_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SizeTable" Member="SizeTables">
+    <Type Name="SizeTable">
+      <Column Name="Size_code" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Size_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SubCategoryTable" Member="SubCategoryTables">
+    <Type Name="SubCategoryTable">
+      <Column Name="SubCategory_Code" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SubCategory_name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Temptable" Member="Temptables">
+    <Type Name="Temptable">
+      <Column Name="Temp_sno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Temp_Variable" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Temp_Purqty" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Temp_Rank" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Temp_Reorder" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MeanRankingTable" Member="MeanRankingTables">
+    <Type Name="MeanRankingTable">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Variable_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Variable_Frequency" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Overall_Value" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Percentage" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Ranking" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.knn_filter" Member="knn_filters">
+    <Type Name="knn_filter">
+      <Column Name="Sales_no" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Distance" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Variable_heading" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Variable_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Naive_bayes" Member="Naive_bayes">
+    <Type Name="Naive_baye">
+      <Column Name="naive_id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceGroup_XVariable" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Price_Group_AB" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="AgeGroup_Vs_PG" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Gender_Vs_PG" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Locality_vs_PG" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Season_vs_PG" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Naive_bayes" Type="System.Decimal" DbType="Decimal(18,6)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

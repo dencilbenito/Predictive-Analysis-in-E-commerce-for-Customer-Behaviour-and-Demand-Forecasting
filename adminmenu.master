@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="adminmenu.master.cs" Inherits="adminmenu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <img src="images/header.jpg" style="height: 301px; width: 960px" />
+            </div>
+          
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/frmadminmenu.aspx" Text="Home"/>
+                        <asp:MenuItem Text="Dataset" Value="Dataset">
+                            <asp:MenuItem NavigateUrl="~/frmdataset.aspx" Text="Input Historical Dataset" 
+                                Value="Input Historical Dataset">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/frmviewdataset.aspx" 
+                                Text="View Historical Dataset" Value="View Historical Dataset">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Ranking" Value="Ranking" 
+                            NavigateUrl="~/Frm_Rankinganalysis.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Machine Learning" Value="Machine Learning">
+                            <asp:MenuItem Text="K-Nearest Neighbour" Value="K-Nearest Neighbour" 
+                                NavigateUrl="~/frm_knn.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Naive Bayes Classifier" Value="Naive Bayes Classifier"
+                                 NavigateUrl="~/frm_naivebayes.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Log out" Value="Log out">
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
